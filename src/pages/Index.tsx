@@ -1,7 +1,7 @@
-import { LendoraFramework } from "@/components/lendora-framework";
+import { CompleteLendoraFramework } from "@/components/complete-lendora-framework";
 
 const Index = () => {
-  return <LendoraFramework />;
+  return <CompleteLendoraFramework />;
 };
 
 export default Index;
