@@ -4,20 +4,16 @@ import { NavLink, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { 
   Home, 
-  BarChart3, 
-  Users, 
-  Building, 
-  FileText, 
-  Settings, 
-  CreditCard,
-  TrendingUp,
-  Calendar,
-  MessageSquare,
-  Bell
+  Brain, 
+  Vault, 
+  CheckSquare
 } from "lucide-react";
 
 const navigation = [
   { name: "Mapa", href: "/", icon: Home },
+  { name: "Inteligência", href: "/inteligencia", icon: Brain },
+  { name: "Cofre", href: "/cofre", icon: Vault },
+  { name: "Tarefas", href: "/tarefas", icon: CheckSquare },
 ];
 
 export function LendoraSidebar() {

@@ -5,10 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Loans from "./pages/Loans";
-import Multicasting from "./pages/Multicasting";
-import Analytics from "./pages/Analytics";
-import Applications from "./pages/Applications";
+import Inteligencia from "./pages/Inteligencia";
+import Cofre from "./pages/Cofre";
+import Tarefas from "./pages/Tarefas";
 
 const queryClient = new QueryClient();
 
@@ -20,10 +19,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/loans" element={<Loans />} />
-          <Route path="/multicasting" element={<Multicasting />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/applications" element={<Applications />} />
+          <Route path="/inteligencia" element={<Inteligencia />} />
+          <Route path="/cofre" element={<Cofre />} />
+          <Route path="/tarefas" element={<Tarefas />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
