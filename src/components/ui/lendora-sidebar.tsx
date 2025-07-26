@@ -17,15 +17,7 @@ import {
 } from "lucide-react";
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: Home },
-  { name: "Loan Center", href: "/loans", icon: CreditCard },
-  { name: "Multicasting Hub", href: "/multicasting", icon: MessageSquare },
-  { name: "Analytics", href: "/analytics", icon: BarChart3 },
-  { name: "Applications", href: "/applications", icon: FileText },
-  { name: "Management", href: "/management", icon: Users },
-  { name: "Reports", href: "/reports", icon: TrendingUp },
-  { name: "Calendar", href: "/calendar", icon: Calendar },
-  { name: "Settings", href: "/settings", icon: Settings },
+  { name: "Mapa", href: "/", icon: Home },
 ];
 
 export function LendoraSidebar() {
@@ -40,7 +32,7 @@ export function LendoraSidebar() {
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">L</span>
             </div>
-            <span className="font-bold text-xl font-urbanist">Elementos UI</span>
+            <span className="font-bold text-xl font-urbanist text-slate-800">Elementos UI</span>
           </div>
         )}
         {isCollapsed && (
