@@ -40,7 +40,7 @@ export function LendoraSidebar() {
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">L</span>
             </div>
-            <span className="font-bold text-xl font-urbanist">Lendora</span>
+            <span className="font-bold text-xl font-urbanist">Elementos UI</span>
           </div>
         )}
         {isCollapsed && (
@@ -58,11 +58,11 @@ export function LendoraSidebar() {
                 <NavLink
                   to={item.href}
                   className={({ isActive }) => cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200",
+                    "flex items-center gap-3 px-3 py-4 rounded-lg text-sm font-medium transition-all duration-200",
                     "hover:bg-muted/50 hover:scale-[1.02]",
                     isActive 
                       ? "bg-primary text-primary-foreground shadow-soft" 
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-slate-700 hover:text-slate-900"
                   )}
                 >
                   <item.icon className="h-5 w-5 flex-shrink-0" />
