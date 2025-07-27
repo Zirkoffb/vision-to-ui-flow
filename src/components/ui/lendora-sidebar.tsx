@@ -6,11 +6,13 @@ import {
   Home, 
   Brain, 
   Vault, 
-  CheckSquare
+  CheckSquare,
+  MapPin
 } from "lucide-react";
 
 const navigation = [
-  { name: "Mapa", href: "/", icon: Home },
+  { name: "Elementos UI", href: "/", icon: Home },
+  { name: "Mapa", href: "/mapa", icon: MapPin },
   { name: "Inteligência", href: "/inteligencia", icon: Brain },
   { name: "Cofre", href: "/cofre", icon: Vault },
   { name: "Tarefas", href: "/tarefas", icon: CheckSquare },
