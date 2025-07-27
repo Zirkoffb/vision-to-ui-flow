@@ -30,9 +30,7 @@ export default function Mapa() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={position}>
-            <Popup>
-              São Paulo - Localização atual
-            </Popup>
+            <Popup>São Paulo - Localização atual</Popup>
           </Marker>
         </MapContainer>
       </div>
