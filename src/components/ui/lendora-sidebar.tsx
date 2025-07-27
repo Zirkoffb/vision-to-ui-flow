@@ -49,9 +49,9 @@ export function LendoraSidebar() {
                   to={item.href}
                   className={({ isActive }) => cn(
                     "flex items-center gap-3 px-3 py-4 rounded-lg text-sm font-medium transition-all duration-200",
-                    "hover:bg-muted/50 hover:scale-[1.02]",
+                    "hover:bg-slate-100 hover:scale-[1.02]",
                     isActive 
-                      ? "bg-primary text-primary-foreground shadow-soft" 
+                      ? "bg-primary text-white shadow-soft" 
                       : "text-slate-700 hover:text-slate-900"
                   )}
                 >
