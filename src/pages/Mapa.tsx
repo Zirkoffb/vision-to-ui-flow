@@ -31,10 +31,7 @@ export default function Mapa() {
           />
           <Marker position={position}>
             <Popup>
-              <div className="text-center">
-                <strong>São Paulo</strong><br />
-                Localização atual
-              </div>
+              São Paulo - Localização atual
             </Popup>
           </Marker>
         </MapContainer>
