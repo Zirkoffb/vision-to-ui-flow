@@ -20,24 +20,16 @@ const navigation = [
 
 export function LendoraSidebar() {
   const location = useLocation();
-  const [isCollapsed, setIsCollapsed] = React.useState(false);
 
   return (
-    <Sidebar className={cn("border-r bg-card/50 backdrop-blur-sm", isCollapsed ? "w-16" : "w-64")}>
+    <Sidebar className="border-r bg-card/50 backdrop-blur-sm w-64">
       <SidebarHeader className="p-4 border-b">
-        {!isCollapsed && (
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">L</span>
-            </div>
-            <span className="font-bold text-xl font-urbanist text-slate-800">Elementos UI</span>
-          </div>
-        )}
-        {isCollapsed && (
-          <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center mx-auto">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-sm">L</span>
           </div>
-        )}
+          <span className="font-bold text-xl font-urbanist text-slate-800">Elementos UI</span>
+        </div>
       </SidebarHeader>
 
       <SidebarContent className="p-2">
@@ -56,20 +48,13 @@ export function LendoraSidebar() {
                   )}
                 >
                   <item.icon className="h-5 w-5 flex-shrink-0" />
-                  {!isCollapsed && <span>{item.name}</span>}
+                  <span>{item.name}</span>
                 </NavLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
         </SidebarMenu>
       </SidebarContent>
-
-      {/* Notification indicator when collapsed */}
-      {isCollapsed && (
-        <div className="absolute top-4 right-2">
-          <div className="w-2 h-2 bg-destructive rounded-full animate-pulse" />
-        </div>
-      )}
     </Sidebar>
   );
 }
