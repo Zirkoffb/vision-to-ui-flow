@@ -11,6 +11,23 @@ L.Icon.Default.mergeOptions({
   shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 });
 
+// MapContent component to isolate leaflet context
+function MapContent({ position }: { position: [number, number] }) {
+  return (
+    <>
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <Marker position={position}>
+        <Popup>
+          São Paulo - Localização atual
+        </Popup>
+      </Marker>
+    </>
+  );
+}
+
 export default function Mapa() {
   const position: [number, number] = [-23.5505, -46.6333]; // São Paulo coordinates
 
@@ -25,15 +42,7 @@ export default function Mapa() {
           style={{ height: "100%", width: "100%" }}
           className="rounded-lg"
         >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={position}>
-            <Popup>
-              <span>São Paulo - Localização atual</span>
-            </Popup>
-          </Marker>
+          <MapContent position={position} />
         </MapContainer>
       </div>
     </div>
