@@ -1,7 +1,7 @@
-import { CompleteLendoraFramework } from "@/components/complete-lendora-framework";
+import Home from "./Home";
 
 const Index = () => {
-  return <CompleteLendoraFramework />;
+  return <Home />;
 };
 
 export default Index;
